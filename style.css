@@ -1,0 +1,19 @@
+
+.grid{
+    margin-top: 50px;
+    text-align: center;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2px;
+    background-color: black; 
+}
+
+
+.square{
+    padding: 50px;
+    background-color: white;
+}
+
+h6{
+    text-align: center;
+}
