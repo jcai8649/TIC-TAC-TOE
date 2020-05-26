@@ -14,19 +14,19 @@
 
     <main class="container">
         <div class="formBox">
-            <form>
+            <form id="playerForm">
                 <label for="player1">Player1's Name:</label>
-                <input type="text" class="name" id="player1">
+                <input type="text"  name="player1" id="player1" required>
                 <label for="player2">Player2's Name:</label>
-                <input type="text" class="name" id="player2">
-                <button class="startBtn btn-primary">Start Game!</button>
+                <input type="text"  name="player2" id="player2" required>
+                <button type="button" class="startBtn btn-primary" onclick="start()">Start Game!</button>
             </form>
         </div>
     </main>
 
 
-    
-    <!-- <main class="container">
+<!--     
+    <main class="container">
         <div class="grid">
             <div class="square" id="1" onclick="displayController.addMark(1)"></div>
             <div class="square" id="2" onclick="displayController.addMark(2)"></div>
