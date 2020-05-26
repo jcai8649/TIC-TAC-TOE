@@ -10,9 +10,23 @@
 </head>
 <body>
     <h1 class="text-center">Tic-Tac-Toe</h1>
-    <h6 class="turn">Player X's Turn</h6>
-    
+    <!-- <h6 class="turn">Player X's Turn</h6> -->
+
     <main class="container">
+        <div class="formBox">
+            <form>
+                <label for="player1">Player1's Name:</label>
+                <input type="text" class="name" id="player1">
+                <label for="player2">Player2's Name:</label>
+                <input type="text" class="name" id="player2">
+                <button class="startBtn btn-primary">Start Game!</button>
+            </form>
+        </div>
+    </main>
+
+
+    
+    <!-- <main class="container">
         <div class="grid">
             <div class="square" id="1" onclick="displayController.addMark(1)"></div>
             <div class="square" id="2" onclick="displayController.addMark(2)"></div>
@@ -24,7 +38,7 @@
             <div class="square" id="8" onclick="displayController.addMark(8)"></div>
             <div class="square" id="9" onclick="displayController.addMark(9)"></div>
         </div>
-    </main>
+    </main> -->
     <script src="app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js.map"></script>
 </body>

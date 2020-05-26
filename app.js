@@ -28,11 +28,11 @@ const displayController = (() =>{
     }
 
     const checkWin = (symbol) => {
-
+        debugger;
         let win = [[1,2,3], [4,5,6], [7,8,9], [1,4,7], [2,5,8], [3,6,9], [1,5,9], [3,5,7]];
         let newArr = [];
         for (let i = 0; i < Gameboard.gameBoard.length; i++){
-            if (symbol == Gameboard.gameBoard[i]) {
+            if (symbol === Gameboard.gameBoard[i]) {
                 newArr.push(i+1);
             }
         }
@@ -42,7 +42,7 @@ const displayController = (() =>{
         for (let i = 0; i < win.length; i++){
             if (checker(newArr, win[i])){
                 turn.innerText = `${symbol} wins!` ;
-                break ;
+                break;
             }
             else if (!Gameboard.gameBoard.includes("") && i === win.length - 1){
                 turn.innerText = "It's a tie!"
@@ -58,13 +58,26 @@ const displayController = (() =>{
         }
     }
     return {addMark, render};
+
 })();
 
 const PlayerFactory = (name, symbol, theirTurn) =>{  
     return {name, symbol, theirTurn}
 }
 
-const player1 = PlayerFactory("player1", 'X', true);
-const player2 = PlayerFactory("player2", 'O', false);
+function createPlayer(playerName){
+    const player1 = PlayerFactory(playerName, 'X', true);
+    const player2 = PlayerFactory(playerName, 'O', false);   
+}
 
+function restart(){
 
+}
+
+function start(){
+
+}
+
+function validation(){
+
+}

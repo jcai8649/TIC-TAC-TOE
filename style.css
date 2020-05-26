@@ -4,9 +4,8 @@
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2px;
-    background-color: black; 
+    background-color: aquamarine; 
 }
-
 
 .square{
     padding: 50px;
@@ -15,4 +14,23 @@
 
 h6{
     text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: aquamarine;
+    border-radius: 10%;
+}
+
+.formBox{
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+
+}
+
+.startBtn{
+    margin-top: 20px;
 }
