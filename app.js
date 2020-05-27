@@ -6,6 +6,7 @@ const Gameboard = (() => {
 
 const displayController = (() =>{
     
+    //add player symbol to the board and switch turn
     const addMarkAndSwitch = (id) =>{
         let turn = document.querySelector(".turn");
         if(Gameboard.gameBoard[id-1] === ""){
@@ -113,7 +114,7 @@ const GameStart = (() =>{
         return true;
     }
     
-    
+    //create board and restart button
     const createBoard = () =>{
         const main = document.querySelector("main");
         const numberOfSquare = 9;
@@ -143,7 +144,7 @@ const GameStart = (() =>{
         }
     }
 
-    //
+    //clear and reset to the board and player to their initial turn
     function restart(){
         let turn = document.querySelector(".turn");
         turn.remove();
@@ -155,6 +156,8 @@ const GameStart = (() =>{
     return {createPlayer, start, restart}
 })();
 
+
+//player contructor
 const PlayerFactory = (name, symbol, theirTurn) =>{  
     return {name, symbol, theirTurn}
 }
