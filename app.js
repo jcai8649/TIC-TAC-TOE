@@ -6,7 +6,7 @@ const Gameboard = (() => {
 
 const displayController = (() =>{
     
-    const addMark = (id) =>{
+    const addMarkAndSwitch = (id) =>{
         let turn = document.querySelector(".turn");
         if(Gameboard.gameBoard[id-1] === ""){
             if(player1.theirTurn){
@@ -40,10 +40,15 @@ const displayController = (() =>{
         }
         let turn = document.querySelector(".turn");
         let checker = (arr, target) => target.every(v => arr.includes(v));
-
+        let squareList = document.querySelectorAll(".square")
         for (let i = 0; i < win.length; i++){
+            //if a winner is detected, display winner and remove the onclick attritbute
+            //to prevent further user input
             if (checker(newArr, win[i])){
-                turn.innerText = `${name} wins!` ;
+                turn.innerText = `${name} wins! Restart for a rematch!` ;
+                for (let square of squareList){
+                    square.removeAttribute("onclick");
+                }
                 break;
             }
             else if (!Gameboard.gameBoard.includes("") && i === win.length - 1){
@@ -59,13 +64,11 @@ const displayController = (() =>{
            squareID.innerText = board[i];
         }
     }
-    return {addMark, render};
+    return {addMarkAndSwitch, render};
 
 })();
 
-const PlayerFactory = (name, symbol, theirTurn) =>{  
-    return {name, symbol, theirTurn}
-}
+
 
 const GameStart = (() =>{
 
@@ -135,11 +138,12 @@ const GameStart = (() =>{
             let square = document.createElement("div")
             square.setAttribute("class", "square");
             square.setAttribute("id", i);
-            square.setAttribute("onclick", `displayController.addMark(${i})`)
+            square.setAttribute("onclick", `displayController.addMarkAndSwitch(${i})`)
             grid.append(square);
         }
     }
 
+    //
     function restart(){
         let turn = document.querySelector(".turn");
         turn.remove();
@@ -151,3 +155,6 @@ const GameStart = (() =>{
     return {createPlayer, start, restart}
 })();
 
+const PlayerFactory = (name, symbol, theirTurn) =>{  
+    return {name, symbol, theirTurn}
+}
