@@ -38,3 +38,7 @@ form{
 .turn{
     margin-top: 20px;
 }
+
+.restart {
+    color:red;
+}

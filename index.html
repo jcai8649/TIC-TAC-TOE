@@ -10,35 +10,20 @@
 </head>
 <body>
     <h1 class="text-center">Tic-Tac-Toe</h1>
-    <!-- <h6 class="turn">Player X's Turn</h6> -->
 
     <main class="container">
         <div class="formBox">
             <form id="playerForm">
-                <label for="player1">Player1's Name:</label>
+                <label for="player1"> X - Player1's Name:</label>
                 <input type="text"  name="player1" id="player1" required>
-                <label for="player2">Player2's Name:</label>
+                <label for="player2"> O - Player2's Name:</label>
                 <input type="text"  name="player2" id="player2" required>
-                <button type="button" class="startBtn btn-primary" onclick="start()">Start Game!</button>
+                <button type="button" class="startBtn btn-primary" onclick="GameStart.start()">Start Game!</button>
             </form>
         </div>
     </main>
 
 
-<!--     
-    <main class="container">
-        <div class="grid">
-            <div class="square" id="1" onclick="displayController.addMark(1)"></div>
-            <div class="square" id="2" onclick="displayController.addMark(2)"></div>
-            <div class="square" id="3" onclick="displayController.addMark(3)"></div>
-            <div class="square" id="4" onclick="displayController.addMark(4)"></div>
-            <div class="square" id="5" onclick="displayController.addMark(5)"></div>
-            <div class="square" id="6" onclick="displayController.addMark(6)"></div>
-            <div class="square" id="7" onclick="displayController.addMark(7)"></div>
-            <div class="square" id="8" onclick="displayController.addMark(8)"></div>
-            <div class="square" id="9" onclick="displayController.addMark(9)"></div>
-        </div>
-    </main> -->
     <script src="app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js.map"></script>
 </body>
